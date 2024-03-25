@@ -4,7 +4,18 @@
     <!-- You are: (shop domain name) -->
     <section>
     </section>
-
+    <section>
+        <div style="width: 100%">
+            <div class="columns one">
+                <a href="{{ URL::tokenRoute('home') }}">
+                    <button class="secondary icon-arrow-left"></button>
+                </a>
+            </div>
+            <div class="columns eleven">
+                <h3><b>Form Detail</b></h3>
+            </div>
+        </div>
+    </section>
     <section>
         <article>
             <div class="card columns six">

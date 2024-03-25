@@ -2,7 +2,7 @@
 
 @section('content')
     @include('header')
-    <section>
+   
         <div class="column twelve" style="width: 100%">
             <div class="column one-half">
                 <div class="card">

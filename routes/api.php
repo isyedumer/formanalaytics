@@ -3,6 +3,7 @@
 use App\Http\Controllers\FrontController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LocalController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,3 +25,5 @@ Route::post('/save-fields-records', [FrontController::class, 'saveFieldsRecords'
 Route::post('/submitForm-fields-records', [FrontController::class, 'submitFormFieldsRecords']);
 
 Route::get('/get-settings', [FrontController::class, 'getSettings']);
+Route::get('/get-form-fields', [LocalController::class, 'getFormFields']);
+Route::post('/fields-form-submit', [LocalController::class, 'submitFieldsForm']);

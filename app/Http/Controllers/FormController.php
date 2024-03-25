@@ -23,7 +23,11 @@ class FormController extends Controller
                 $formsName = "Contact Form" ;
             } else if($submittedForm['form_type'] == "/account"){
                 $formsName = "Registration Form" ;
-            } else {
+            } else if($submittedForm['form_type'] == '/fields-design-form'){
+                $formsName = "Custom Design Form";
+            } 
+            
+            else {
                 continue;
             }
             $totalFormViews = $totalFormViews + 1;
@@ -63,11 +67,15 @@ class FormController extends Controller
     }
 
     public function formDetails(Request $request) {
+        // dd($request->all());
 
         if($request->form == "Contact Form"){
             $name = "/contact#ContactForm";
         } else if($request->form == "Registration Form"){
             $name = "/account";
+        } else if($request->form == "Custom Design Form"){
+            $name = "/fields-design-form";
+
         }
         $submittedForms = TrackeFormRecords::where("form_type",$name)->get();
         $totalFormViews = 0;

@@ -4,8 +4,25 @@
     <!-- You are: (shop domain name) -->
     <section>
     </section>
+    
+    <section style="padding-left: 20px">
+        <div style="width: 100%">
+            
+            <div class="columns eleven">
+                <h3><b>Dashboard</b></h3>
+            </div>
+        </div>
+    </section>
 
+    <div class="row align-right">
+        <div class="col-12" style="display: inline-flex">
+            <a href="{{ URL::tokenRoute('localTesting') }}" class="button" style="margin-right: 10px">Design Form</a>
+            <a href="{{ URL::tokenRoute('form.settings.show') }}" class="button">Form Settings</a>
+            <a href="{{ URL::tokenRoute('getRecords') }}" class="button" style="margin-left: 10px;">View Forms</a>
+    </div>
+    </div>
     <section>
+      
         <article>
             <div class="card columns six">
                 <p>Total form views</p>
@@ -71,6 +88,6 @@
     @parent
 
     <script>
-        actions.TitleBar.create(app, { title: 'Welcome' });
+        // actions.TitleBar.create(app, { title: 'Welcome' });
     </script>
 @endsection
